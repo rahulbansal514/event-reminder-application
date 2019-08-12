@@ -1,0 +1,25 @@
+.footer{
+	width:100%;
+	float:left;
+	padding:20px 18px;
+	background:#2c8ecf;
+	text-align:center;
+	position: relative;
+	.socialLinks{
+		width:100%;
+		float:left;
+		li{
+			display:inline-block;
+			a{
+				display:inline-block;
+				margin:0 10px 10px;
+				color:#ffffff;
+			}
+		}
+	}
+	h6{
+		width:100%;
+		float:left;
+		color:#ffffff;
+	}
+}

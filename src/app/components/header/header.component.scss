@@ -1,0 +1,33 @@
+@import "~src/scss/variables";
+.header{
+	width:100%;
+	float:left;
+	padding:20px 18px;
+	background:$backgroundcolor;
+	text-align:center;
+	position: relative;
+	.logo{
+		display:inline-block;
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		-moz-transform:translate(-50%,-50%);
+		-webkit-transform:translate(-50%,-50%);
+		-o-transform:translate(-50%,-50%);
+		-ms-transform:translate(-50%,-50%);
+		color:#ffffff;
+	}
+	.headerRight{
+		float:right;
+		.userName{
+			display:inline-block;
+			color:#ffffff;
+			margin:0 10px;
+		}
+		.userInfo{
+			display:inline-block;
+			color:#bbbbbb;
+		}
+	}
+}
