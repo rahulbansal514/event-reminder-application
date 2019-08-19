@@ -6,26 +6,24 @@
 	width:100%;
 	float:left;
 	padding:20px 18px;
-	background:$backgroundcolor;
+	background:$white;
 	text-align:center;
 	position: relative;
+	box-shadow: 0 0 2px 0px rgba(0,0,0,0.5);
+	@include box-shadow(0,0,5px,rgba(0,0,0,.5));
 	.logo{
 		display:inline-block;
 		position:absolute;
 		top:50%;
 		left:50%;
-		transform:translate(-50%,-50%);
-		-moz-transform:translate(-50%,-50%);
-		-webkit-transform:translate(-50%,-50%);
-		-o-transform:translate(-50%,-50%);
-		-ms-transform:translate(-50%,-50%);
-		color:#ffffff;
+		@include css3-transformTranslate(transform,translate(-50%, -50%));
+		color:$black;
 	}
 	.headerRight{
 		float:right;
 		.userName{
 			display:inline-block;
-			color:#ffffff;
+			color:$black;
 			margin:0 10px;
 		}
 		.userInfo{
