@@ -36,7 +36,9 @@
 				"src/scss"
 			  ]
 			},
-            "scripts": []
+            "scripts": [
+				"./src/assets/js/custom.js"
+			]
           },
           "configurations": {
             "production": {
