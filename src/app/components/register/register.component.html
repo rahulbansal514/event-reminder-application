@@ -1,13 +1,41 @@
 <div class="formEvent">
 	<div class="formEventcontainer">
-		<form class="">
-			<label class="formHead">Register Now</label>
-			<input type="text" placeholder="First Name" />
-			<input type="text" placeholder="Last Name" />
-			<input type="email" placeholder="Email Id" />
-			<input type="password" placeholder="Password" />
-			<input type="password" placeholder="Confirm Password" />
-			<input type="submit" value="Register" />
+		<label class="formHead">
+			Register Now
+		</label>
+		<form class="" (ngSubmit)="ngSubmit(form1)" #form1="ngForm">
+			<div class="form-group">
+				<label>First Name</label>
+				<input type="text" [(ngModel)]="user.fname" name="userfirstname" #name="ngModel" minlength="6" required/>
+				<div class="errorMsgs" *ngIf="name.invalid && (name.dirty || name.touched)">
+					<p *ngIf="name.hasError('required')">
+						User Name is Required Field
+					</p>
+					<p *ngIf="name.hasError('minlength')">
+						Minimun 6 Chracters are Required
+					</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>Last Name</label>
+				<input type="text" [(ngModel)]="user.lname" name="userlastname" />
+			</div>
+			<div class="form-group">
+				<label>Email Id</label>
+				<input type="email" [(ngModel)]="user.emailid" name="useremailid" />
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" [(ngModel)]="user.passwordname" name="userpassword" />
+			</div>
+			<div class="form-group">
+				<label>Confirm Password</label>
+				<input type="password" [(ngModel)]="user.confirmpasswordname" name="userconfirmpassword" />
+			</div>
+			<div class="form-group">
+				<label></label>
+				<input type="submit" name="submit" value="submit" [disabled]="form1.invalid" />
+			</div>
 		</form>
 	</div>
 </div>

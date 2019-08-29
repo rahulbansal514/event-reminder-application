@@ -1,21 +1,17 @@
 form{
 	width:100%;
 	float:left;
-	.formHead{
-		width:100%;
-		float:left;
-		text-align:center;
-		margin-bottom:15px;
-		text-transform:uppercase;
+	label{
+		margin-top:10px;
 	}
 	input{
 		width:100%;
 		float:left;
-		margin:10px 0;
+		margin:5px 0;
 		padding:8px 15px;
 		outline:0;
 		border:1px solid $darkGray;
-		color:$darkGray;
+		color:$black;
 		font-size:14px;
 		line-height:24px;
 	}
@@ -24,6 +20,7 @@ form{
 		color:$white;
 		border:0;
 		text-transform:uppercase;
+		cursor:pointer;
 	}
 }
 .formEvent{
@@ -34,7 +31,12 @@ form{
 		max-width:480px;
 		padding:0 15px;
 		margin:0 auto;
-		width:100%;
+		width:100%;		
+		.formHead{
+			text-align:center;
+			margin-bottom:15px;
+			text-transform:uppercase;
+		}
 	}
 }
 .forgotPassword{
