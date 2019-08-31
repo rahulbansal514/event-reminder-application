@@ -3,7 +3,7 @@
 		<label class="formHead">
 			Register Now
 		</label>
-		<form class="" (ngSubmit)="ngSubmit(form1)" #form1="ngForm">
+		<form class="" (ngSubmit)="ngSubmit(formRegister)" #formRegister="ngForm">
 			<div class="form-group">
 				<label>First Name</label>
 				<input type="text" [(ngModel)]="user.fname" name="userfirstname" #fname="ngModel" minlength="3" required />
@@ -62,9 +62,12 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label></label>
-				<input type="submit" name="submit" value="submit" [disabled]="form1.invalid" />
+				<input type="submit" name="submit" value="submit" [disabled]="formRegister.invalid" />
 			</div>
 		</form>
+		<div class="AlreadyRegLogin">
+			<label>OR</label>
+			<span>If already registered <a routerLink = "/login">Login</a> here.</span>
+		</div>
 	</div>
 </div>

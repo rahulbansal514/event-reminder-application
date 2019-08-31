@@ -7,13 +7,21 @@ html,body{
 	font-weight:400;
 	position:relative;
 	font-family: $roboto4;
+	font-size:14px;
+	line-height:20px;
 }
 h1,h2,h3,h4,h5,h6,p,ul,li{
 	margin:0;
+	font-weight: 400;
+}
+label,b, strong {
+	margin-bottom: 0;
+	font-weight: 400;
 }
 .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small{
 	font-size:100%;
 	color: $black;
+	font-weight: 400;
 }
 label{
 	width:100%;
@@ -37,6 +45,12 @@ img{
 }
 a{
 	text-decoration:none;
+}
+a,i{
+	color:$black;
+}
+a{
+	display:inline-block;
 }
 a:focus{
 	text-decoration:none!important;
@@ -63,10 +77,6 @@ select:focus{outline:0;}
 textarea:focus{outline: 0;}
 .overflow{
 	overflow: hidden!important;
-}
-label,b, strong {
-	margin-bottom: 0;
-	font-weight: 400;
 }
 .slick-prev{left:0;}
 .slick-next{right:0;}
@@ -131,7 +141,7 @@ input:-moz-placeholder { /* Firefox 18- */
 	color: $black;
 }
 input:disabled {
-	opacity:0.75;
+	opacity:0.25;
 }
 
 /* Common CSS End */

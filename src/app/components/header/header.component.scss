@@ -6,7 +6,6 @@
 	width:100%;
 	float:left;
 	padding:20px 18px;
-	background:$white;
 	text-align:center;
 	position: relative;
 	border-bottom:1px solid $darkGray;
@@ -16,18 +15,18 @@
 		top:50%;
 		left:50%;
 		@include css3-transform(transform,translate(-50%, -50%));
-		color:$black;
 	}
 	.headerRight{
 		float:right;
 		.userName{
-			display:inline-block;
-			color:$black;
 			margin:0 10px;
-		}
-		.userInfo{
-			display:inline-block;
-			color:#bbbbbb;
+			small{
+				font-size:13px;
+			}
+			label{
+				width:auto;
+				float:none;
+			}
 		}
 		.userInfoDetails{
 			display:none;
@@ -43,8 +42,6 @@
 				width:100%;
 				float:left;
 				a{
-					display:inline-block;
-					color:$black;
 					float:left;
 					margin:5px 0;
 				}

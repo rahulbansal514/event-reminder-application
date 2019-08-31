@@ -6,7 +6,6 @@
 	width:100%;
 	float:left;
 	padding:20px 18px;
-	background:$white;
 	text-align:center;
 	position: relative;
 	border-top:1px solid $darkGray;
@@ -16,15 +15,13 @@
 		li{
 			display:inline-block;
 			a{
-				display:inline-block;
 				margin:0 10px 10px;
-				color:$black;
 			}
 		}
 	}
 	h6{
 		width:100%;
 		float:left;
-		color:$black;
+		font-size:12px;
 	}
 }
