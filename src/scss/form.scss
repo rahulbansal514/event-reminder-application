@@ -12,7 +12,7 @@ form{
 		outline:0;
 		border:1px solid $darkGray;
 		color:$black;
-		font-size:14px;
+		font-size:13px;
 		line-height:24px;
 	}
 	input[type="submit"]{
@@ -23,6 +23,13 @@ form{
 		text-transform:uppercase;
 		cursor:pointer;
 	}
+}
+.errorMsgs{
+	color:$errorColor;
+	font-size: 12px;
+	width: 100%;
+	float: left;
+	line-height: 20px;
 }
 .formEvent{
 	width:100%;
