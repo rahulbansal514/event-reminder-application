@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  showInfo: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  userinfo(){
+    this.showInfo = !this.showInfo;
   }
 
 }

@@ -20,10 +20,12 @@ export class RegisterComponent implements OnInit {
 		passwordname: '',
 		confirmpasswordname: '',
 	}
-	ngSubmit(e){
-		console.log(e);	
-		console.log(e.controls['userfirstname'].status);	
-		console.log(e.value.userfirstname);	
-		console.log(this.user.fname);	
+ 	ngSubmit(registerData){
+		//debugger
+		console.log(registerData);
+		// console.log(e);	
+		// console.log(e.controls['userfirstname'].status);	
+		// console.log(e.value.userfirstname);	
+		// console.log(this.user.fname);	
 	}
 }

@@ -5,8 +5,8 @@
 			<small>Hi </small>
 			<label>User Name</label>
 		</span>
-		<a href="javascript:void(0);" class="userInfo" onclick="userinfo()"><i class="fa fa-user"></i></a>
-		<ul class="userInfoDetails" id="userDropdown">
+		<a href="javascript:void(0);" class="userInfo" (click)="userinfo()"><i class="fa fa-user"></i></a>
+		<ul class="userInfoDetails" *ngIf="showInfo">
 			<li>
 				<a routerLink = "/login">Login/ Sign Up</a>
 			</li>

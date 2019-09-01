@@ -3,10 +3,11 @@
 		<label class="formHead">
 			Register Now
 		</label>
-		<form class="" (ngSubmit)="ngSubmit(formRegister)" #formRegister="ngForm">
+		<form class="" (ngSubmit)="ngSubmit(formRegister.value)" #formRegister="ngForm">
 			<div class="form-group">
 				<label>First Name</label>
 				<input type="text" [(ngModel)]="user.fname" name="userfirstname" #fname="ngModel" minlength="3" required />
+				<!--{{user.fname}}-->
 				<div class="errorMsgs" *ngIf="fname.invalid && (fname.dirty || fname.touched)">
 					<p *ngIf="fname.hasError('required')">
 						First Name is Required
@@ -30,7 +31,7 @@
 			</div>
 			<div class="form-group">
 				<label>Email Id</label>
-				<input type="email" [(ngModel)]="user.emailid" name="useremailid" #Regemailid="ngModel" required email />
+				<input type="email" [(ngModel)]="user.emailid" name="useremailid" #Regemailid="ngModel" required />
 				<div class="errorMsgs" *ngIf="Regemailid.invalid && (Regemailid.dirty || Regemailid.touched)">
 					<p *ngIf="Regemailid.hasError('required')">
 						Email Id is Required
