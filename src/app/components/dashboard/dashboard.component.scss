@@ -1,0 +1,28 @@
+@import "~src/scss/color";
+@import "~src/scss/variables";
+@import "~src/scss/mixin";
+
+.upcomingEvents{
+    width: 100%;
+    float: left;
+    ul{
+        width: 100%;
+        float: left;
+        margin: 10px 0;
+        li{
+            width: 100%;
+            float: left;
+            border: 1px solid $darkGray;
+            .upcomingEventHead{
+                border-bottom: 1px solid $darkGray;
+                padding: 10px 15px;
+                text-align: center;
+            }
+            .upcomingEventcontent{
+                padding: 10px 15px;
+                width: 100%;
+                float: left;
+            }
+        }
+    }
+}

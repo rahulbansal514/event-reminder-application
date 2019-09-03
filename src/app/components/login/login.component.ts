@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
 
 	loginData: any =
 		{
-			username: 'test@test.com',
+			username: 'rahulbansal514@gmail.com',
 			password: 'password'
 		}
 
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
 		console.log(data);
 		if ((this.loginData.username == data.useremailid) && (this.loginData.password == data.userpassword)) {
 			console.log('data match success');
-			this.route.navigateByUrl('/');
+			this.route.navigateByUrl('/dashboard');
 		}
 	}
 }
