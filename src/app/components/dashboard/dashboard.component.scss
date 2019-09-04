@@ -5,66 +5,111 @@
 .upcomingEvents{
     width: 100%;
     float: left;
-    .addNewEvents{
-        float: right;
-        margin:10px 0 20px;
-        border: 1px solid $lightGray;
-        line-height: 36px;
-        padding: 0 12px;
-        text-transform: uppercase;
-        letter-spacing: 1.0px;
-        font-size: 14px;
-        background: $lightGray;
-        &:hover{
-            background: $white;
-        }
-    }
-    .upcomingEventHead{
-        border: 1px solid $darkGray;
-        padding: 10px 15px;
-        text-align: center;
-        background: $lightGray;
-        text-transform: uppercase;
-        font-size: 14px;
-        letter-spacing: 1.2px;
-    }
-    ul{
+    .addNewEventsOutr{
         width: 100%;
         float: left;
-        border: 1px solid $darkGray;
-        border-top: 0;
-        border-bottom: 0;
-        li{
+        .addNewEvents{
+            float: right;
+            margin:0 0 20px;
+            border: 1px solid $lightGray;
+            line-height: 36px;
+            padding: 0 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.0px;
+            font-size: 14px;
+            background: $lightGray;
+            &:hover{
+                background: $white;
+            }
+        }
+    }
+    // .FilteringDashBoard{
+    //     width: 25%;
+    //     float: left;
+    //     padding-right: 20px;
+    //     .FilteringDashBoardinner{
+    //         width: 100%;
+    //         float: left;
+    //         .filterHead{
+    //             border: 1px solid $darkGray;
+    //             padding: 10px 15px;
+    //             text-align: center;
+    //             background: $lightGray;
+    //             text-transform: uppercase;
+    //             font-size: 14px;
+    //             letter-spacing: 1.2px;
+    //             width: 100%;
+    //             float: left;
+    //             i{
+    //                 margin-left: 10px;
+    //             }
+    //         }
+    //         .filterShow{
+    //             width: 100%;
+    //             float: left;
+    //             border: 1px solid $darkGray;
+    //             border-top:0;
+    //             li{
+    //                 width: 100%;
+    //                 float: left;
+    //                 border-bottom: 1px solid $darkGray;
+    //                 padding: 10px 15px;
+    //                 text-transform: uppercase;
+    //                 letter-spacing: 1.2px;
+    //                 &:last-child{
+    //                     border-bottom: 0;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    .UpcomingEventsDataOutr{
+        width: 100%;
+        float: left;
+        .upcomingEventHead{
+            border: 1px solid $darkGray;
+            padding: 10px 15px;
+            text-align: center;
+            background: $lightGray;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1.2px;
+        }
+        .UpcomingEventsData{
             width: 100%;
             float: left;
-            border-bottom: 1px solid $darkGray;
-            .upcomingEventcontent{
-                padding: 13px 15px;
-                width: 100%;
+            border-left: 1px solid $darkGray;
+            li{
+                width: 50%;
                 float: left;
-                position: relative;
-                line-height: 26px;
-                .moreInfoEvent{
-                    position: absolute;
-                    right: 15px;
-                    top:50%;
-                    background: $lightGray;
-                    border: 1px solid $lightGray;
-                    @include css3-transform(transform,translate(0, -50%));
-                    padding: 0 10px;
-                    display: inline-block;
-                    text-transform: uppercase;
-                    font-size: 13px;
-                    &:hover{
-                        
+                border-right: 1px solid $darkGray;
+                border-bottom: 1px solid $darkGray;
+                .upcomingEventcontent{
+                    padding: 13px 15px;
+                    width: 100%;
+                    float: left;
+                    position: relative;
+                    line-height: 26px;
+                    .moreInfoEvent{
+                        position: absolute;
+                        right: 15px;
+                        top:50%;
+                        background: $lightGray;
+                        border: 1px solid $lightGray;
+                        @include css3-transform(transform,translate(0, -50%));
+                        padding: 0 10px;
+                        display: inline-block;
+                        text-transform: uppercase;
+                        font-size: 13px;
+                        &:hover{
+                            
+                        }
                     }
                 }
-            }
-            &:nth-child(even){
-                background: $lightGray;
-                .upcomingEventcontent{
-                    .moreInfoEvent{
-                        &:nth-child(even){
+                &:nth-child(4n-2),&:nth-child(4n-1){
+                    background: $lightGray;
+                    .upcomingEventcontent{
+                        .moreInfoEvent{
                             background: $white;
                         }
                     }
