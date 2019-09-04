@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NewEventsFormComponent } from './components/dashboard/new-events-form/new-events-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     RegisterComponent,
     HomeComponent,
     ForgotPasswordComponent,
-    DashboardComponent
+    DashboardComponent,
+    NewEventsFormComponent
   ],
   imports: [
     BrowserModule,

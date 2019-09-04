@@ -1,16 +1,24 @@
 <div class="formEvent">
 	<div class="formEventcontainer">
-		<label class="formHead">
-			Dashboard
-        </label>
+		<label class="formHead">Dashboard</label>
         <div class="upcomingEvents">
+            <a href="javascript:void(0);" routerLink="/new-events-form" class="addNewEvents">Add New Events</a>
+            <label class="upcomingEventHead">Upcoming Events</label>
             <ul>
-                <li>
-                    <label class="upcomingEventHead">Upcoming Events</label>
+                <li *ngFor="let UpcomingEvent of UpcomingEvents">
                     <div class="upcomingEventcontent">
-                        Birthday
+                        <label>{{UpcomingEvent.eventType}}</label>
+                        <label>{{UpcomingEvent.eventName}}</label>
+                        <label>{{UpcomingEvent.eventDate}}</label>
+                        <a href="javascript:void(0);" class="moreInfoEvent">More</a>
                     </div>
                 </li>
+                <!-- <li>
+                    <div class="upcomingEventcontent">
+                        <label>Aniversary</label>
+                        <a href="javascript:void(0);" class="moreInfoEvent">More</a>
+                    </div>
+                </li> -->
             </ul>
         </div>
 	</div>
