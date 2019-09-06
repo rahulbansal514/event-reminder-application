@@ -12,11 +12,11 @@
             float: right;
             margin:0 0 20px;
             border: 1px solid $lightGray;
-            line-height: 36px;
+            line-height: 32px;
             padding: 0 12px;
             text-transform: uppercase;
             letter-spacing: 1.0px;
-            font-size: 14px;
+            font-size: 12px;
             background: $lightGray;
             &:hover{
                 background: $white;
@@ -84,6 +84,9 @@
                 float: left;
                 border-right: 1px solid $darkGray;
                 border-bottom: 1px solid $darkGray;
+                @include breakpoint(xs) {
+                    width: 100%;
+                }
                 .upcomingEventcontent{
                     padding: 13px 15px;
                     width: 100%;
@@ -108,9 +111,30 @@
                 }
                 &:nth-child(4n-2),&:nth-child(4n-1){
                     background: $lightGray;
+                    @include breakpoint(xs) {
+                        background: $white;
+                    }
                     .upcomingEventcontent{
                         .moreInfoEvent{
                             background: $white;
+                            border: 1px solid $white;
+                            @include breakpoint(xs) {
+                                background:$lightGray;
+                                border: 1px solid $lightGray;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(even){
+                    @include breakpoint(xs) {
+                        background: $lightGray;
+                    }
+                    .upcomingEventcontent{
+                        .moreInfoEvent{
+                            @include breakpoint(xs) {
+                                background:$white;
+                                border: 1px solid $white;
+                            }
                         }
                     }
                 }
