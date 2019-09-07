@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NewEventsFormComponent } from './components/dashboard/new-events-form/new-events-form.component';
+import { UserProfileComponent } from './components/dashboard/user-profile/user-profile.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
 	{path:"register", component:RegisterComponent},
 	{path:"forgot-password", component:ForgotPasswordComponent},
 	{path:"dashboard", component:DashboardComponent},
-	{path:"new-events-form", component:NewEventsFormComponent}
+	{path:"new-events-form", component:NewEventsFormComponent},
+	{path:"user-profile", component:UserProfileComponent}
 	
 ];
 
