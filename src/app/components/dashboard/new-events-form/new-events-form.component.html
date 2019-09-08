@@ -5,7 +5,7 @@
         </label>
         <form class="" (ngSubmit)="ngSubmit(formAddEvent.value)" #formAddEvent="ngForm">
             <div class="form-group">
-                <label>Event Type</label>
+                <label>Event Type<em>*</em></label>
                 <select [(ngModel)]="user.eventType" name="usereventType" #eventTypeName="ngModel" required>
                     <option>Select Option</option>
                     <option>Birthday</option>
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label>Event Name</label>
+                <label>Event Name<em>*</em></label>
                 <input type="text" [(ngModel)]="user.eventName" name="usereventName" #eName="ngModel" minlength="3" required />
                 <div class="errorMsgs" *ngIf="eName.invalid && (eName.dirty || eName.touched)">
                     <p *ngIf="eName.hasError('required')">
@@ -31,13 +31,17 @@
                 </div>
             </div>
             <div class="form-group">
-                <label>Event Date</label>
+                <label>Event Date<em>*</em></label>
                 <input type="date" [(ngModel)]="user.eventDate" name="usereventDate" #eventDateName="ngModel" required />
                 <div class="errorMsgs" *ngIf="eventDateName.invalid && (eventDateName.dirty || eventDateName.touched)">
                     <p *ngIf="eventDateName.hasError('required')">
                         Event Date is Required
                     </p>
                 </div>
+            </div>
+            <div class="form-group">
+                <label>Event Time</label>
+                <input type="time" value="00:00:00" name="usereventTime"/>
             </div>
             <div class="form-group">
                 <label>Repeat Annually</label>
@@ -56,6 +60,11 @@
                     <option>No</option>
                 </select>
             </div>
+			<div class="form-group">
+				<div class="starFields">
+					<span>All the * fields required.</span>
+				</div>
+			</div>
             <div class="form-group">
                 <input type="submit" name="submit" value="Add Event" [disabled]="formAddEvent.invalid" />
             </div>

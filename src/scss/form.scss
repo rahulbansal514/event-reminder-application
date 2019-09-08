@@ -3,6 +3,13 @@ form{
 	float:left;
 	label{
 		margin-top:10px;
+		em{
+			color:$errorColor;
+			margin-left: 2px;
+			margin-top: -5px;
+			display: inline-block;
+			vertical-align: top;
+		}
 	}
 	input,select{
 		width:100%;
@@ -69,6 +76,16 @@ form{
 		&:hover{
 			text-decoration:none;
 		}
+	}
+}
+.starFields{
+	width:100%;
+	float:left;
+	span{
+		display:inline-block;
+		color:$errorColor;
+		font-size:12px;
+		line-height:20px;
 	}
 }
 .AlreadyRegLogin{
