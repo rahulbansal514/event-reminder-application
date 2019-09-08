@@ -12,10 +12,10 @@ export class ForgotPasswordComponent implements OnInit {
 	ngOnInit() {
 	}
 	user = {
-		emailid: '',
+		emailId: '',
 	}
-	ngSubmit(e){
-		console.log(e);	 
+	ngSubmit(forgotData){
+		console.log(forgotData);	 
 	}
 
 }

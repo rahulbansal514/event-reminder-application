@@ -3,72 +3,62 @@
         <label class="formHead">
             Add New Events
         </label>
-        <!-- <form class="" (ngSubmit)="ngSubmit(formRegister.value)" #formRegister="ngForm">
+        <form class="" (ngSubmit)="ngSubmit(formAddEvent.value)" #formAddEvent="ngForm">
             <div class="form-group">
-                <label>First Name</label>
-                <input type="text" [(ngModel)]="user.fname" name="userfirstname" #fname="ngModel" minlength="3" required />
-                
-                <div class="errorMsgs" *ngIf="fname.invalid && (fname.dirty || fname.touched)">
-                    <p *ngIf="fname.hasError('required')">
-                        First Name is Required
+                <label>Event Type</label>
+                <select [(ngModel)]="user.eventType" name="usereventType" #eventTypeName="ngModel" required>
+                    <option>Select Option</option>
+                    <option>Birthday</option>
+                    <option>Aniversary</option>
+                    <option>One Time Event</option>
+                </select>
+                <div class="errorMsgs" *ngIf="eventTypeName.invalid && (eventTypeName.dirty || eventTypeName.touched)">
+                    <p *ngIf="eventTypeName.hasError('required')">
+                        Event Type is Required
                     </p>
-                    <p *ngIf="fname.hasError('minlength')">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Event Name</label>
+                <input type="text" [(ngModel)]="user.eventName" name="usereventName" #eName="ngModel" minlength="3" required />
+                <div class="errorMsgs" *ngIf="eName.invalid && (eName.dirty || eName.touched)">
+                    <p *ngIf="eName.hasError('required')">
+                        Event Name is Required
+                    </p>
+                    <p *ngIf="eName.hasError('minlength')">
                         Minimun 3 Chracters are Required
                     </p>
                 </div>
             </div>
             <div class="form-group">
-                <label>Last Name</label>
-                <input type="text" [(ngModel)]="user.lname" name="userlastname" #lname="ngModel" minlength="3" required />
-                <div class="errorMsgs" *ngIf="lname.invalid && (lname.dirty || lname.touched)">
-                    <p *ngIf="lname.hasError('required')">
-                        Last Name is Required
-                    </p>
-                    <p *ngIf="lname.hasError('minlength')">
-                        Minimun 3 Chracters are Required
+                <label>Event Date</label>
+                <input type="date" [(ngModel)]="user.eventDate" name="usereventDate" #eventDateName="ngModel" required />
+                <div class="errorMsgs" *ngIf="eventDateName.invalid && (eventDateName.dirty || eventDateName.touched)">
+                    <p *ngIf="eventDateName.hasError('required')">
+                        Event Date is Required
                     </p>
                 </div>
             </div>
             <div class="form-group">
-                <label>Email Id</label>
-                <input type="email" [(ngModel)]="user.emailid" name="useremailid" #Regemailid="ngModel" required email />
-                <div class="errorMsgs" *ngIf="Regemailid.invalid && (Regemailid.dirty || Regemailid.touched)">
-                    <p *ngIf="Regemailid.hasError('required')">
-                        Email Id is Required
-                    </p>
-                    <p *ngIf="Regemailid.hasError('email')">
-                        Email must be a valid email address
-                    </p>
+                <label>Repeat Annually</label>
+                <div class="switchOutr">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span> 
+                    </label>
                 </div>
             </div>
             <div class="form-group">
-                <label>Password</label>
-                <input type="password" [(ngModel)]="user.passwordname" name="userpassword" #Regpassword="ngModel" minlength="6" required />
-                <div class="errorMsgs" *ngIf="Regpassword.invalid && (Regpassword.dirty || Regpassword.touched)">
-                    <p *ngIf="Regpassword.hasError('required')">
-                        Password is Required
-                    </p>
-                    <p *ngIf="Regpassword.hasError('minlength')">
-                        Password must be at least 6 characters
-                    </p>
-                </div>
+                <label>Reminder</label>
+                <select>
+                    <option>Select Option</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
             </div>
             <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" [(ngModel)]="user.confirmpasswordname" name="userconfirmpassword" #RegConfirmpassword="ngModel" required />
-                <div class="errorMsgs" *ngIf="RegConfirmpassword.invalid && (RegConfirmpassword.dirty || RegConfirmpassword.touched)">
-                    <p *ngIf="RegConfirmpassword.hasError('required')">
-                        Confirm Password is Required
-                    </p>
-                </div>
-            </div>
-            <div class="form-group">
-                <input type="submit" name="submit" value="Register" [disabled]="formRegister.invalid" />
+                <input type="submit" name="submit" value="Add Event" [disabled]="formAddEvent.invalid" />
             </div>
         </form>
-        <div class="AlreadyRegLogin">
-            <label>OR</label>
-            <span>If already registered <a routerLink = "/login">Login</a> here.</span>
-        </div> -->
     </div>
 </div>

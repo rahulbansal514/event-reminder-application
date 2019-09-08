@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
 
 	loginData: any =
 		{
-			username: 'rahulbansal514@gmail.com',
+			emailId: 'rahulbansal514@gmail.com',
 			password: 'password'
 		}
 
@@ -22,12 +22,12 @@ export class LoginComponent implements OnInit {
 		console.log(this.route)
 	}
 	user = {
-		emailid: '',
-		passwordname: '',
+		emailId: '',
+		password: '',
 	}
 	ngSubmit(data) {
 		console.log(data);
-		if ((this.loginData.username == data.useremailid) && (this.loginData.password == data.userpassword)) {
+		if ((this.loginData.emailId == data.useremailId) && (this.loginData.password == data.userpassword)) {
 			console.log('data match success');
 			this.route.navigateByUrl('/dashboard');
 		}

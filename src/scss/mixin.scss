@@ -9,7 +9,7 @@
 		-ms-#{$property}: #{$value};
 		 -o-#{$property}: #{$value};
 			#{$property}: #{$value};
-}
+} 
 @mixin css3-transform($property, $value) { 
   -webkit-#{$property}: #{$value};
      -moz-#{$property}: #{$value};

@@ -12,4 +12,12 @@ export class NewEventsFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  user = {
+    eventType: '',
+    eventName: '',
+		eventDate: '',
+	}
+ 	ngSubmit(addEventData){
+		console.log(addEventData);
+	}
 }

@@ -14,11 +14,11 @@ export class RegisterComponent implements OnInit {
 	ngOnInit() {
 	}
 	user = {
-		fname: '',
-		lname: '',
-		emailid: '',
-		passwordname: '',
-		confirmpasswordname: '',
+		firstName: '',
+		lastName: '',
+		emailId: '',
+		mobileNo: '',
+		password: '',
 	}
  	ngSubmit(registerData){
 		//debugger
