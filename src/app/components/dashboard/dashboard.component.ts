@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
    ngOnInit() {
       this.myservice.getData().subscribe((data) => {
          this.UpcomingEvents = Array.from(Object.keys(data), k=>data[k]);
-         console.log(this.UpcomingEvents);
+         console.log(this.UpcomingEvents[1]);
       });
    }
   // UpcomingEvents = [
