@@ -5,33 +5,11 @@
             <div class="addNewEventsOutr">
                 <a href="javascript:void(0);" routerLink="/new-events-form" class="addNewEvents">Add New Events</a>
             </div>
-            <!-- <div class="FilteringDashBoard">
-                <div class="FilteringDashBoardinner">
-                    <span class="filterHead">Filter<i class="fa fa-filter"></i></span>
-                    <ul class="filterShow">
-                        <li><a href="javascript:void(0);">All Events</a></li>
-                        <li><a href="javascript:void(0);">Birthday</a></li>
-                        <li><a href="javascript:void(0);">Aniversary</a></li>
-                    </ul>
-                </div>
-            </div> -->
-            <!-- <div class="UpcomingEventsDataOutr">
-                <label class="upcomingEventHead">Upcoming Events</label>
-                <ul class="UpcomingEventsData">
-                    <li *ngFor="let UpcomingEvent of UpcomingEvents">
-                        <div class="upcomingEventcontent">
-                            <label>{{UpcomingEvent.eventType}}</label>
-                            <label>{{UpcomingEvent.eventName}}</label>
-                            <label>{{UpcomingEvent.eventDate}}</label>
-                            <a href="javascript:void(0);" class="moreInfoEvent">More</a>
-                        </div>
-                    </li>
-                </ul>
-            </div> -->
+            
             <div class="UpcomingEventsDataOutr">
                 <label class="upcomingEventHead">Upcoming Events</label>
                 <ul class="UpcomingEventsData">
-                    <li *ngFor="let UpcomingEvent of UpcomingEvents[1]">
+                    <li *ngFor="let UpcomingEvent of UpcomingEvents">
                         <div class="upcomingEventcontent">
                             <label>{{UpcomingEvent.eventType}}</label>
                             <label>{{UpcomingEvent.eventName}}</label>
