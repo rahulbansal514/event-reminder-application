@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
 	selector: 'app-login',
@@ -8,28 +9,29 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-	loginData: any =
-		{
-			emailId: 'rahulbansal514@gmail.com',
-			password: 'password'
-		}
 
-	constructor(
-		public route: Router
-	) { }
+	constructor(public route: Router, public authService: AuthService) {}
 
 	ngOnInit() {
-		console.log(this.route)
 	}
+	
 	user = {
 		emailId: '',
 		password: '',
 	}
+	
 	ngSubmit(data) {
 		console.log(data);
-		if ((this.loginData.emailId == data.useremailId) && (this.loginData.password == data.userpassword)) {
-			console.log('data match success');
-			this.route.navigateByUrl('/dashboard');
-		}
+		this.authService.doLogin(data).subscribe((response:any) =>{
+			console.log(response);
+			if(response.success){
+				this.route.navigateByUrl('/dashboard');
+			}
+			else{
+				console.log(response.message);
+			}
+		});
+		
+		
 	}
 }
