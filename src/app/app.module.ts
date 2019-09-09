@@ -13,6 +13,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NewEventsFormComponent } from './components/dashboard/new-events-form/new-events-form.component';
 import { UserProfileComponent } from './components/dashboard/user-profile/user-profile.component';
+import { AlleventsService } from './services/allevents/allevents.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,10 @@ import { UserProfileComponent } from './components/dashboard/user-profile/user-p
   imports: [
     BrowserModule,
     AppRoutingModule,
-	FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AlleventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
