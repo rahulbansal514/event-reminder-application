@@ -6,7 +6,7 @@
 		<form class="" (ngSubmit)="ngSubmit(formRegister.value)" #formRegister="ngForm">
 			<div class="form-group">
 				<label>First Name<em>*</em></label>
-				<input type="text" [(ngModel)]="user.firstName" name="userfirstName" #fName="ngModel" minlength="3" required />
+				<input type="text" [(ngModel)]="user.firstName" name="firstName" #fName="ngModel" minlength="3" required />
 				<div class="errorMsgs" *ngIf="fName.invalid && (fName.dirty || fName.touched)">
 					<p *ngIf="fName.hasError('required')">
 						First Name is Required
@@ -18,7 +18,7 @@
 			</div>
 			<div class="form-group">
 				<label>Last Name<em>*</em></label>
-				<input type="text" [(ngModel)]="user.lastName" name="userlastName" #lName="ngModel" minlength="3" required />
+				<input type="text" [(ngModel)]="user.lastName" name="lastName" #lName="ngModel" minlength="3" required />
 				<div class="errorMsgs" *ngIf="lName.invalid && (lName.dirty || lName.touched)">
 					<p *ngIf="lName.hasError('required')">
 						Last Name is Required
@@ -30,7 +30,7 @@
 			</div>
 			<div class="form-group">
 				<label>Email Id<em>*</em></label>
-				<input type="email" [(ngModel)]="user.emailId" name="useremailId" #emailIdName="ngModel" required email />
+				<input type="email" [(ngModel)]="user.emailId" name="emailId" #emailIdName="ngModel" required email />
 				<div class="errorMsgs" *ngIf="emailIdName.invalid && (emailIdName.dirty || emailIdName.touched)">
 					<p *ngIf="emailIdName.hasError('required')">
 						Email Id is Required
@@ -42,7 +42,7 @@
 			</div>
 			<div class="form-group">
 				<label>Mobile No<em>*</em></label>
-				<input type="text" [(ngModel)]="user.mobileNo" name="usermobileNo" #mobileName="ngModel" minlength="10" maxlength="10" required />
+				<input type="text" [(ngModel)]="user.mobileNo" name="mobileNo" #mobileName="ngModel" minlength="10" maxlength="10" required />
 				<div class="errorMsgs" *ngIf="mobileName.invalid && (mobileName.dirty || mobileName.touched)">
 					<p *ngIf="mobileName.hasError('required')">
 						Mobile No is Required
@@ -54,7 +54,7 @@
 			</div>
 			<div class="form-group">
 				<label>Password<em>*</em></label>
-				<input type="password" [(ngModel)]="user.password" name="userpassword" #passwordName="ngModel" minlength="6" required />
+				<input type="password" [(ngModel)]="user.password" name="password" #passwordName="ngModel" minlength="6" required />
 				<div class="errorMsgs" *ngIf="passwordName.invalid && (passwordName.dirty || passwordName.touched)">
 					<p *ngIf="passwordName.hasError('required')">
 						Password is Required
@@ -66,7 +66,7 @@
 			</div>
 			<div class="form-group">
 				<label>Confirm Password<em>*</em></label>
-				<input type="password" [(ngModel)]="user.confirmPassword" name="userconfirmPassword" #confirmPasswordName="ngModel" required />
+				<input type="password" [(ngModel)]="user.confirmPassword" name="confirmPassword" #confirmPasswordName="ngModel" required />
 				<div class="errorMsgs" *ngIf="confirmPasswordName.invalid && (confirmPasswordName.dirty || confirmPasswordName.touched)">
 					<p *ngIf="confirmPasswordName.hasError('required')">
 						Confirm Password is Required

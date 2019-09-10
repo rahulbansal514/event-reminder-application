@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlleventsService } from '../../././././services/allevents/allevents.service';
+import { AlleventsService } from '../../services/allevents/allevents.service';
 
 @Component({
   selector: 'app-dashboard',
