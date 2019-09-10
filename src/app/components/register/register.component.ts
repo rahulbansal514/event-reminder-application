@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RegisterService } from '../../services/register/register.service';
 
 @Component({
   selector: 'app-register',
@@ -7,11 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 	
-	constructor() { 
+	constructor(public route: Router, public registerService: RegisterService) {}
 	
-	}
-	
-	ngOnInit() {
+	ngOnInit() { 
 	}
 	user = {
 		firstName: '',
@@ -22,10 +22,21 @@ export class RegisterComponent implements OnInit {
 	}
  	ngSubmit(registerData){
 		//debugger
-		console.log(registerData);
+		//console.log(registerData);
 		// console.log(e);	
 		// console.log(e.controls['userfirstname'].status);	
 		// console.log(e.value.userfirstname);	
 		// console.log(this.user.fname);	
+		
+		this.registerService.doRegister(registerData).subscribe((response:any) =>{
+			console.log(response);
+			if(response.success){
+				this.route.navigateByUrl('/dashboard');
+			}
+			else{
+				console.log(response.message);
+			}
+		}); 
+
 	}
 }
