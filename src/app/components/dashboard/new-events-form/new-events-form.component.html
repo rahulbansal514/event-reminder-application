@@ -6,7 +6,7 @@
         <form class="" (ngSubmit)="ngSubmit(formAddEvent.value)" #formAddEvent="ngForm">
             <div class="form-group">
                 <label>Event Type<em>*</em></label>
-                <select [(ngModel)]="user.eventType" name="usereventType" #eventTypeName="ngModel" required>
+                <select [(ngModel)]="user.eventType" name="eventType" #eventTypeName="ngModel" required>
                     <option>Select Option</option>
                     <option>Birthday</option>
                     <option>Aniversary</option>
@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label>Event Name<em>*</em></label>
-                <input type="text" [(ngModel)]="user.eventName" name="usereventName" #eName="ngModel" minlength="3" required />
+                <input type="text" [(ngModel)]="user.eventName" name="eventName" #eName="ngModel" minlength="3" required />
                 <div class="errorMsgs" *ngIf="eName.invalid && (eName.dirty || eName.touched)">
                     <p *ngIf="eName.hasError('required')">
                         Event Name is Required
@@ -32,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label>Event Date<em>*</em></label>
-                <input type="date" [(ngModel)]="user.eventDate" name="usereventDate" #eventDateName="ngModel" required />
+                <input type="date" [(ngModel)]="user.eventDate" name="eventDate" #eventDateName="ngModel" required />
                 <div class="errorMsgs" *ngIf="eventDateName.invalid && (eventDateName.dirty || eventDateName.touched)">
                     <p *ngIf="eventDateName.hasError('required')">
                         Event Date is Required
@@ -66,7 +66,8 @@
 				</div>
 			</div>
             <div class="form-group">
-                <input type="submit" name="submit" value="Add Event" [disabled]="formAddEvent.invalid" />
+                <input class="inputHalf" type="submit" name="submit" value="Add Event" [disabled]="formAddEvent.invalid" />
+                <input class="inputHalf" routerLink = "/dashboard" type="submit" name="cancel" value="Cancel" />
             </div>
         </form>
     </div>

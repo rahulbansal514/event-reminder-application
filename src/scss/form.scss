@@ -2,7 +2,8 @@ form{
 	width:100%;
 	float:left;
 	label{
-		margin-top:10px;
+		width: 98%;
+		margin: 10px 1% 0;
 		em{
 			color:$errorColor;
 			margin-left: 2px;
@@ -12,9 +13,9 @@ form{
 		}
 	}
 	input,select{
-		width:100%;
+		width:98%;
 		float:left;
-		margin:5px 0;
+		margin:5px 1%;
 		padding:8px 15px;
 		outline:0;
 		border:1px solid $darkGray;
@@ -26,18 +27,26 @@ form{
 		background:$black;
 		color:$white;
 		border:0;
-		margin:15px 0;
+		margin:15px 1%;
 		text-transform:uppercase;
 		cursor:pointer;
 		&:disabled{
 			cursor:not-allowed;
 		}
 	}
+	input[type="checkbox"]{
+		width: auto;
+		margin:4px 4px 4px 0px;
+	}
+	input.inputHalf{
+		width: 48%;
+	}
 }
 .errorMsgs{
 	color:$errorColor;
 	font-size: 12px;
-	width: 100%;
+	width: 98%;
+	margin: 0 1%;
 	float: left;
 	line-height: 20px;
 }
@@ -49,8 +58,9 @@ form{
 		padding:20px 0;	
 	}
 	.formHead{
+		margin: 0 1% 10px;
+    	width: 98%;	
 		text-align:center;
-		margin-bottom:10px;
 		text-transform:uppercase;
 		font-size: 20px;
 		line-height: 30px;
@@ -60,12 +70,13 @@ form{
 
 .formEventcontainer{
 	max-width:450px;
-	padding:0 20px;
+	padding:0 12px;
 	margin:0 auto;
 	width:100%;	
 }
 .forgotPassword{
-	width:100%;
+	width:98%;
+	margin: 0 1%;
 	float:left;
 	a{
 		display:inline-block;
@@ -79,7 +90,8 @@ form{
 	}
 }
 .starFields{
-	width:100%;
+	width:98%;
+	margin: 0 1%;
 	float:left;
 	span{
 		display:inline-block;
@@ -89,7 +101,8 @@ form{
 	}
 }
 .AlreadyRegLogin{
-	width:100%;
+	width:98%;
+	margin:0 1%;
 	float:left;
 	text-align:center;
 	label{
@@ -109,9 +122,9 @@ form{
 	}
 }
 .switchOutr{
-	width: 100%;
+	width: 98%;
 	float: left;
-	margin: 5px 0;
+	margin: 5px 1%;
 	.switch {
 		position: relative;
 		display: inline-block;
@@ -159,4 +172,8 @@ form{
 			}
 		}
 	}
+}
+.changePasswordFields{
+	width: 100%;
+	float: left;
 }

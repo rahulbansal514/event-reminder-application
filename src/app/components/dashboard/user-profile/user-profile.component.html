@@ -1,1 +1,100 @@
-<p>user-profile works!</p>
+<div class="formEvent">
+	<div class="formEventcontainer">
+		<label class="formHead">
+			My Profile
+		</label>
+		<form class="" (ngSubmit)="ngSubmit(formProfile.value)" #formProfile="ngForm">
+			<div class="form-group">
+				<label>First Name<em>*</em></label>
+				<input type="text" [(ngModel)]="user.firstName" name="firstName" #fName="ngModel" minlength="3" required />
+				<div class="errorMsgs" *ngIf="fName.invalid && (fName.dirty || fName.touched)">
+					<p *ngIf="fName.hasError('required')">
+						First Name is Required
+					</p>
+					<p *ngIf="fName.hasError('minlength')">
+						Minimun 3 Chracters are Required
+					</p> 
+				</div>
+			</div>
+			<div class="form-group">
+				<label>Last Name<em>*</em></label>
+				<input type="text" [(ngModel)]="user.lastName" name="lastName" #lName="ngModel" minlength="3" required />
+				<div class="errorMsgs" *ngIf="lName.invalid && (lName.dirty || lName.touched)">
+					<p *ngIf="lName.hasError('required')">
+						Last Name is Required
+					</p>
+					<p *ngIf="lName.hasError('minlength')">
+						Minimun 3 Chracters are Required
+					</p>
+				</div> 
+			</div>
+			<div class="form-group">
+				<label>Email Id<em>*</em></label>
+				<input type="email" [(ngModel)]="user.emailId" name="emailId" #emailIdName="ngModel" />
+			</div>
+			<div class="form-group">
+				<label>Mobile No<em>*</em></label>
+				<input type="text" [(ngModel)]="user.mobileNo" name="mobileNo" #mobileName="ngModel" minlength="10" maxlength="10" required />
+				<div class="errorMsgs" *ngIf="mobileName.invalid && (mobileName.dirty || mobileName.touched)">
+					<p *ngIf="mobileName.hasError('required')">
+						Mobile No is Required
+					</p>
+					<p *ngIf="(mobileName.hasError('minlength')) || (mobileName.hasError('maxlength'))">
+						Please enter valid Mobile No
+					</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>Date of Birth<em>*</em></label>
+				<input type="date" [(ngModel)]="user.dob" name="dob" #dobName="ngModel" />
+            </div>
+			<div class="form-group">
+				<label><input type="checkbox" />Change Password</label>
+            </div>
+            <div class="changePasswordFields">
+                <div class="form-group">
+                    <label>Current Password<em>*</em></label>
+                    <input type="password" [(ngModel)]="user.currentPassword" name="currentPassword" #currentPasswordName="ngModel" minlength="6" required />
+                    <div class="errorMsgs" *ngIf="currentPasswordName.invalid && (currentPasswordName.dirty || currentPasswordName.touched)">
+                        <p *ngIf="currentPasswordName.hasError('required')">
+                            Current Password is Required
+                        </p>
+                        <p *ngIf="currentPasswordName.hasError('minlength')">
+                            Current Password must be at least 6 characters
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>New Password<em>*</em></label>
+                    <input type="password" [(ngModel)]="user.newPassword" name="newPassword" #newPasswordName="ngModel" minlength="6" required />
+                    <div class="errorMsgs" *ngIf="newPasswordName.invalid && (newPasswordName.dirty || newPasswordName.touched)">
+                        <p *ngIf="newPasswordName.hasError('required')">
+                            New Password is Required
+                        </p>
+                        <p *ngIf="newPasswordName.hasError('minlength')">
+                            New Password must be at least 6 characters
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Confirm New Password<em>*</em></label>
+                    <input type="password" [(ngModel)]="user.confirmNewpassword" name="confirmNewpassword" #confirmNewpasswordName="ngModel" required />
+                    <div class="errorMsgs" *ngIf="confirmNewpasswordName.invalid && (confirmNewpasswordName.dirty || confirmNewpasswordName.touched)">
+                        <p *ngIf="confirmNewpasswordName.hasError('required')">
+                            Confirm New Password is Required
+                        </p>
+                    </div>
+                </div>
+            </div>
+			<div class="form-group">
+				<div class="starFields">
+					<span>All the * fields required.</span>
+				</div>
+			</div>
+			<div class="form-group">
+                <input class="inputHalf" type="submit" name="submit" value="Save" [disabled]="formProfile.invalid" />
+                <input class="inputHalf" routerLink = "/dashboard" type="submit" name="cancel" value="Cancel" />
+			</div>
+		</form>
+	</div>
+</div>
