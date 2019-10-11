@@ -9,9 +9,11 @@ import { AlleventsService } from '../../services/allevents/allevents.service';
 export class DashboardComponent implements OnInit {
 
   public UpcomingEvents = [];
+  public email = 'rahulbansal514@gmail.com';  // for Post
    constructor(private myservice: AlleventsService) {}
    ngOnInit() {
-      this.myservice.getData().subscribe((data:any) => {
+      this.myservice.getData(this.email).subscribe((data:any) => {   // for post
+     // this.myservice.getData().subscribe((data:any) => {   // for get
          //this.UpcomingEvents = Array.from(Object.keys(data), k=>data[k]);
          //console.log(this.UpcomingEvents[1]);
          console.log(data);
